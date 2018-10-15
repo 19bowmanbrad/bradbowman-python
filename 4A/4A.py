@@ -2,6 +2,9 @@ def main():
     myString = str(input('Say something!'))
     print('Your string is- ' + myString)
     print ('Your string without vowels is- ' + noVowels(myString))
+    myList = [2,4,6,8]
+    multiply = 2
+    mathStuff(myList , multiply)
 
 
 
@@ -14,13 +17,12 @@ def noVowels(myString):
 
     return (myStringDeVoweled)
 
-
-
-
-
-
-
-
+def mathStuff(list, multiply):
+    list2 = []
+    for i in list:
+        math = i * multiply
+        list2.insert(i, math)
+        print(list2)
 
 
 main()
