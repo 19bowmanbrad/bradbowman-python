@@ -1,6 +1,7 @@
 def main():
     draw7()
     starsAndStripes()
+    incTriangle()
 
 def draw7():
     for i in range(0, 7):
@@ -18,6 +19,12 @@ def starsAndStripes():
             dashString += "-"
         print(starString)
         print(dashString)
+
+def incTriangle():
+    for i in range(1, 8):
+        for j in range(0, i):
+            print (i, end = "")
+        print()
 
 
 main()
