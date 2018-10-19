@@ -1,7 +1,7 @@
 def main():
     shoppingCart = [['tooth paste', 'q-tips', 'milk'], ['milk', 'candy', 'apples'], ['paper', 'pencils', 'q-tips']]
-    test = allInOne(shoppingCart)
-    print(test)
+    allItems = allInOne(shoppingCart)
+    print(allItems)
 
 
 
@@ -9,11 +9,19 @@ def main():
 
 def allInOne(myShoppingCart):
     print('allInOne')
+    allItem = []
     newList = []
     for item in myShoppingCart:
-        if item not in myShoppingCart:
-            myShoppingCart.append(item)
-    return myShoppingCart
+        for x in item:
+            allItem.append(x)
+    print(allItem)
+    input('pause')
+    for x in allItem:
+        if x not in newList:
+            newList.append(x)
+
+
+    return newList
 
 #--------------------------------------------------
 
