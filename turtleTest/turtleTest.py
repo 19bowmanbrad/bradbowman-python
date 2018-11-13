@@ -1,9 +1,9 @@
 import turtle
-
 def main():
     draw = turtle.Pen()
     turtle.bgcolor("cyan")
     draw.speed(.25)
+    draw.hideturtle()
     for x in range (2):
         for i in range (0, 4):
             draw.forward(100)
@@ -30,8 +30,12 @@ def main():
     for x in range(100):
         draw.forward(x)
         draw.left(91)
-    draw.hideturtle()
+    draw.pencolor("green")
+    draw.penup()
+    draw.goto(1, 200)
+    draw.pendown()
+    for x in range(100):
+        draw.forward(x)
+        draw.left(91)
     input()
-
-
 main()
