@@ -79,9 +79,9 @@ def screenSpace():
 def compArt():
     radius = 80
     turtle.goto(0,0)
-    red = float((random.randrange(1, 9))/10)
-    green = float((random.randrange(1, 9))/10)
-    blue = float((random.randrange(1, 9))/10)
+    red = float((random.randrange(0, 100))/100)
+    green = float((random.randrange(0, 100))/100)
+    blue = float((random.randrange(0, 100))/100)
     turtle.color(red, green, blue)
     turtle.speed(0)
     for x in range (200):
@@ -92,36 +92,56 @@ def compArt():
             radius = 95
         if (radius < 35):
             radius = 40
-        red += float((random.randrange(-2, 2))/10)
+        red += float((random.randrange(-20, 20))/100)
         if ((red > .9) or (red < .1)):
-            red = float((random.randrange(1, 9))/10)
-        blue += float((random.randrange(-2, 2))/10)
+            red = float((random.randrange(0, 100))/100)
+        blue += float((random.randrange(-20, 20))/100)
         if ((blue > .9) or (blue < .1)):
-            blue = float((random.randrange(1, 9))/10)
-        green += float((random.randrange(-2, 2))/10)
+            blue = float((random.randrange(0, 100))/100)
+        green += float((random.randrange(-20, 20))/100)
         if ((green > .9) or (green < 0.1)):
-            green = float((random.randrange(1, 9))/10)
+            green = float((random.randrange(0, 100))/100)
         turtle.color(red, green, blue)
 
 def compArt2():
     turtle.reset()
-    y = 0
+    turtle.hideturtle()
+    y = -40
     turtle.goto(0, y)
-    red = float((random.randrange(1, 9))/10)
-    green = float((random.randrange(1, 9))/10)
-    blue = float((random.randrange(1, 9))/10)
+    red = float((random.randrange(0, 100))/100)
+    green = float((random.randrange(0, 100))/100)
+    blue = float((random.randrange(0, 100))/100)
     turtle.color(red, green, blue)
     length = 40
     turtle.speed(0)
-    area = 65
-    for z in range (5):
+    area = 50
+    for z in range (1):
         for x in range (area):
-            for i in range (3):
+            for i in range (4):
                 turtle.forward(length)
                 turtle.left(30)
-                red = float((random.randrange(1, 9))/10)
-                green = float((random.randrange(1, 9))/10)
-                blue = float((random.randrange(1, 9))/10)
+                red = float((random.randrange(0, 100))/100)
+                green = float((random.randrange(0, 100))/100)
+                blue = float((random.randrange(0, 100))/100)
+                if ((red > .9) or (red < .1)):
+                    red = float((random.randrange(0, 100))/100)
+                if ((blue > .9) or (blue < .1)):
+                    blue = float((random.randrange(0, 100))/100)
+                if ((green > .9) or (green < 0.1)):
+                    green = float((random.randrange(0, 100))/100)
+                turtle.color(red, green, blue)
+            for i in range (4):
+                turtle.forward(length)
+                turtle.left(90)
+                red = float((random.randrange(0, 100))/100)
+                green = float((random.randrange(0, 100))/100)
+                blue = float((random.randrange(0, 100))/10)
+                if ((red > .9) or (red < .1)):
+                    red = float((random.randrange(0, 100))/100)
+                if ((blue > .9) or (blue < .1)):
+                    blue = float((random.randrange(0, 100))/100)
+                if ((green > .9) or (green < 0.1)):
+                    green = float((random.randrange(0, 100))/100)
                 turtle.color(red, green, blue)
             length += 5
             y += 25
@@ -130,16 +150,14 @@ def compArt2():
         y = 0
         turtle.goto(0, y)
         length = 40
-        turtle.left(10)
         turtle.pendown()
-
 
 
 
 
 # draw()
 # main()
-# compArt()
-compArt2()
+compArt()
+#compArt2()
 # Allow screen exit on clicking window
 turtle.exitonclick()
