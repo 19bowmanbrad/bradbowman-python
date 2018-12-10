@@ -1,0 +1,89 @@
+Index: unit7ALab/.idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- unit7ALab/.idea/vcs.xml	(date 1544114157000)
++++ unit7ALab/.idea/vcs.xml	(date 1544114157000)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: unit7ALab/.idea/unit7ALab.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- unit7ALab/.idea/unit7ALab.iml	(date 1544114157000)
++++ unit7ALab/.idea/unit7ALab.iml	(date 1544114157000)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="jdk" jdkName="Python 3.6" jdkType="Python SDK" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++  <component name="TestRunnerService">
++    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
++  </component>
++</module>
+\ No newline at end of file
+Index: unit7ALab/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- unit7ALab/.idea/misc.xml	(date 1544114109000)
++++ unit7ALab/.idea/misc.xml	(date 1544114109000)
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6" project-jdk-type="Python SDK" />
++</project>
+\ No newline at end of file
+Index: unit7ALab/.idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- unit7ALab/.idea/modules.xml	(date 1544114109000)
++++ unit7ALab/.idea/modules.xml	(date 1544114109000)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/unit7ALab.iml" filepath="$PROJECT_DIR$/.idea/unit7ALab.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: unit7ALab/.idea/inspectionProfiles/Project_Default.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- unit7ALab/.idea/inspectionProfiles/Project_Default.xml	(date 1544460904000)
++++ unit7ALab/.idea/inspectionProfiles/Project_Default.xml	(date 1544460904000)
+@@ -0,0 +1,15 @@
++<component name="InspectionProjectProfileManager">
++  <profile version="1.0">
++    <option name="myName" value="Project Default" />
++    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
++      <option name="ignoredErrors">
++        <list>
++          <option value="W29" />
++          <option value="E501" />
++          <option value="W29" />
++          <option value="E501" />
++        </list>
++      </option>
++    </inspection_tool>
++  </profile>
++</component>
+\ No newline at end of file
