@@ -1,4 +1,5 @@
-import pygame
+
+import math, random, pygame
 
 
 pygame.init()
@@ -17,24 +18,48 @@ red = (255, 0, 0)
 car_width = 73
 car_height = 73
 
+obstacle_width = 73
+obstacle_height = 73
+
 
 clock = pygame.time.Clock()
 crashed = False
 carImg = pygame.image.load("/home/19bowmanbradley@bprep.org/Downloads/racecar.png")
 backGround = pygame.image.load("/home/19bowmanbradley@bprep.org/Downloads/road.png")
 backGround2 = pygame.image.load("/home/19bowmanbradley@bprep.org/Downloads/road.png")
+obstacle = pygame.image.load("/home/19bowmanbradley@bprep.org/Downloads/circle.png")
+
+# def collide(carX, carY, obsX, obsY):
+#
+# MAYBE
+# def is_collided_with(self, sprite):
+#     return self.rect.colliderect(sprite.rect)
+#
+# sprite = Sprite(10, 10, 'my_sprite')
+# bullet = Bullet(20, 10)
+# if bullet.is_collided_with(sprite):
+#     print 'collision!'
+#     bullet.kill()
+#     sprite.kill()
 
 
-def car(x,y):
+
+
+def items(x,y):
     gameDisplay.blit(backGround, (0,bgY))
     gameDisplay.blit(backGround2, (0, (bgY + display_height)))
     gameDisplay.blit(backGround2, (0, (bgY - display_height)))
+    gameDisplay.blit(obstacle, (obsX, bgY))
     gameDisplay.blit(carImg, (x,y))
+
 
 
 bgX = display_width
 bgY = 0
 bgY2 = 0
+
+obsX = random.randint(140, 300)
+obsY = bgY
 
 
 x = (display_width * 0.45)
@@ -53,8 +78,7 @@ while not crashed:
         if event.type == pygame.KEYDOWN:
             if (x > 355 or x < 70):
                 bgY_change = -5
-            # elif (x < 355 and x > 70):
-            #     bgY_change = -10
+
             if event.key == pygame.K_LEFT:
                 x_change = -5
             elif event.key == pygame.K_RIGHT:
@@ -74,9 +98,9 @@ while not crashed:
     y += y_change
     bgY -= bgY_change
     # print(bgY)
-    print (x)
+    # print (x)
     gameDisplay.fill(white)
-    car(x,y)
+    items(x,y)
 
     if x > display_width - car_width:
             x = display_width - car_width
@@ -90,8 +114,11 @@ while not crashed:
 
     if bgY > display_height:
         bgY = display_height * -1
+        obsX = random.randint(140, 300)
     elif bgY2 < display_height:
         bgY2 = display_height
+
+    # collide(x, y, obsX, obsY)
 
 
     pygame.display.update()
