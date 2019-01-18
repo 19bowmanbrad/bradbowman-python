@@ -27,22 +27,14 @@ crashed = False
 carImg = pygame.image.load("/home/19bowmanbradley@bprep.org/Downloads/racecar.png")
 backGround = pygame.image.load("/home/19bowmanbradley@bprep.org/Downloads/road.png")
 backGround2 = pygame.image.load("/home/19bowmanbradley@bprep.org/Downloads/road.png")
-obstacle = pygame.image.load("/home/19bowmanbradley@bprep.org/Downloads/circle.png")
+obstacle = pygame.image.load("/home/19bowmanbradley@bprep.org/Downloads/box.png")
+obstacle2 = obstacle
 
 # def collide(carX, carY, obsX, obsY):
 #
 # MAYBE
 # def is_collided_with(self, sprite):
-#     return self.rect.colliderect(sprite.rect)
-#
-# sprite = Sprite(10, 10, 'my_sprite')
-# bullet = Bullet(20, 10)
-# if bullet.is_collided_with(sprite):
-#     print 'collision!'
-#     bullet.kill()
-#     sprite.kill()
-
-
+#     return self.rect.colliderect(items.rect)
 
 
 def items(x,y):
@@ -50,6 +42,7 @@ def items(x,y):
     gameDisplay.blit(backGround2, (0, (bgY + display_height)))
     gameDisplay.blit(backGround2, (0, (bgY - display_height)))
     gameDisplay.blit(obstacle, (obsX, bgY))
+    gameDisplay.blit(obstacle2, (obs2X, bgY + (400)))
     gameDisplay.blit(carImg, (x,y))
 
 
@@ -59,6 +52,7 @@ bgY = 0
 bgY2 = 0
 
 obsX = random.randint(140, 300)
+obs2X = random.randint(140, 300)
 obsY = bgY
 
 
@@ -94,6 +88,13 @@ while not crashed:
                 x_change = 0
                 y_change = 0
 
+    # car = items(x, y)
+    # obstacle = items(obsX, obsY)
+    # if obstacle.is_collided_with(car):
+    #     print ('collision!')
+    #     bullet.kill()
+        # sprite.kill()
+
     x += x_change
     y += y_change
     bgY -= bgY_change
@@ -101,6 +102,7 @@ while not crashed:
     # print (x)
     gameDisplay.fill(white)
     items(x,y)
+
 
     if x > display_width - car_width:
             x = display_width - car_width
